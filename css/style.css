@@ -11,6 +11,15 @@
 
 /* Header */
 
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    margin: 1rem 1rem;
+}
+
+
 
 #menubar, nav{
     display: none;
@@ -38,26 +47,8 @@ nav a{
 
 .fa-bars{
     color: var(--main-color);
-    font-size: 1.8rem;
-}
-header{
-    display: flex;
-    /* justify-content: center; */
-    justify-content: space-between;
-    /* position: relative; */
-    height: 50px;
-    align-items: center;
-    margin: 1rem 1rem;
-
-}
-
-.logo{
-    max-height: 44px;
-}
-.bag{
-    max-height: 40px;
-}
-@media (min-width: 600px){
+    font-size: 1.5rem;
+}@media (min-width: 600px){
     nav{
         display: block;
         position: static;
@@ -68,8 +59,16 @@ header{
     nav a{
         display: inline-block;
     }
-    #menu-checkbox{
+    #menubar{
         display: none;
     }
 
+}
+.logo{
+    max-height: 40px;
+ 
+}
+.fa-solid{
+  color: var(--main-color);
+  font-size: 1.5rem;
 }
