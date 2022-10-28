@@ -46,6 +46,7 @@ nav a{
     font-size: 1.3rem;
     font-weight: bold;
     margin-left: 1rem;
+    margin-right: 1rem;
     padding: 1rem 0 0 0;
     
 }
@@ -91,4 +92,126 @@ width: 100vw;
 height: 25vh;
 background-position: center;
 background-size: cover;
+margin-bottom: 10%;
 }
+
+.grid{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.woman-container{
+    position: relative;
+    text-align: center;
+    color: white;    
+
+}
+
+.text-woman{
+    position: absolute;
+    top: -350%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;  
+
+}
+
+.man-container{
+    position: relative;
+    text-align: center;
+    color: white;  
+    font-weight: bold;  
+
+}
+.text-man{
+    position: absolute;
+    top: -350%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.woman, .man{    
+    width: 50vw;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5%;
+}
+
+.newinstock{
+    text-align: center;
+ 
+    color: var(--main-color);
+    
+}
+
+.jackets-home{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.nis{
+    width: 30vw;
+    height: 20vh;
+    background-position: center;
+    background-size: cover;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+}
+
+
+.nis-1{
+    background-image: url(/images/RainyDays_Jacket1.png);
+}
+.nis-2{
+    background-image: url(/images/RainyDays_Jacket1.png);
+}
+.nis-3{
+    background-image: url(/images/RainyDays_Jacket1.png);
+}
+.nis-4{
+    background-image: url(/images/RainyDays_Jacket1.png);
+}
+
+
+footer{
+    margin-top: 2rem;
+    background-color: var(--main-color);
+    min-height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sm-header{
+    margin-bottom: 0.5rem;
+}
+
+.sm{
+    color: white;
+}
+
+.sm-text{
+    margin: 0;
+    
+}
+.twitter{
+    margin-bottom: 0.5rem;
+}
+
+.logo-footer{
+    background-image: url(/images/Group.png);
+    width: 20vw;
+    height: 7vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
