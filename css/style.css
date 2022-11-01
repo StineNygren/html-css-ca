@@ -151,6 +151,9 @@ margin-bottom: 10%;
 .jackets-home{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
     
 }
 
@@ -159,8 +162,9 @@ margin-bottom: 10%;
     height: 20vh;
     background-position: center;
     background-size: cover;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: inline-block;
     
 }
 
@@ -178,6 +182,8 @@ margin-bottom: 10%;
     background-image: url(/images/RainyDays_Jacket1.png);
 }
 
+/* footer */
+
 
 footer{
     margin-top: 2rem;
@@ -188,6 +194,7 @@ footer{
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .sm-header{
@@ -208,10 +215,16 @@ footer{
 
 .logo-footer{
     background-image: url(/images/Group.png);
-    width: 20vw;
-    height: 7vh;
+    
+    height: 5vh;
+    width: 18vw;
     background-position: center;
     background-size: cover;
+}
+.newsletter{
+    color: white;
+    margin-bottom: 1rem;
+
 }
 
 
