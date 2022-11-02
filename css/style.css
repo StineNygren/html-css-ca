@@ -12,11 +12,16 @@ body{
 /* Header */
 
 header{
+    background-color: white;
     display: flex;
     justify-content: space-between;
     height: 50px;
     align-items: center;
     box-shadow: 0px 0.3px 8px #666;
+    position: sticky;
+    top: 0;
+    right: 0;
+
 }
 
 
@@ -54,7 +59,9 @@ nav a{
 .fa-bars{
     color: var(--main-color);
     font-size: 1.5rem;
-}@media (min-width: 600px){
+}
+
+@media (min-width: 600px){
     nav{
         display: block;
         position: static;
@@ -63,15 +70,27 @@ nav a{
         display: none;
     }
     nav a{
+        margin-bottom: 0.5rem;
         display: inline-block;
     }
     #menubar{
         display: none;
     }
-
+    .logo{
+        order: -1;
+        
+    }
 }
+
+
+
+
+
+
+
 .logo{
     max-height: 40px;
+    margin: 0 2%;
  
 }
 .fa-solid{
@@ -82,9 +101,7 @@ nav a{
 
 
 /* main */
- main{
 
- }
 
 .head-photo{
 background-image: url(/images/krisjanis-mezulis-__E07WwlywA-unsplash.jpg);
@@ -101,49 +118,49 @@ margin-bottom: 10%;
     flex-direction: column;
     align-items: center;
 }
-.woman-container{
-    position: relative;
-    text-align: center;
-    color: white;    
+
+
+.woman-container, .man-container{    
+    width: clamp(20vw, 50vw, 50vw);
+    height: clamp(20vw, 50vw, 50vw);
+    background-position: center;
+    background-size: cover; 
+    display: flex;
+    text-decoration: none;
 
 }
-
-.text-woman{
-    position: absolute;
-    top: -350%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;  
-
-}
-
 .man-container{
-    position: relative;
-    text-align: center;
-    color: white;  
-    font-weight: bold;  
+    background-image: url(/images/dim-hou-OfF_iK_rYhY-unsplash.jpg);
+}
+.woman-container{
+    background-image: url(/images/karsten-winegeart-9beSs0ir1aI-unsplash.jpg);
 
 }
-.text-man{
-    position: absolute;
-    top: -350%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
+.text-woman, .text-man{
+    position: relative;
+    top: 60%;
+    left: 40%;
+    color: white; 
+    text-align: center;
+    font-weight: bold; 
+    font-size: 5vw;
+}
+.text-woman{
+    left: 30%;
 }
 
 
 .woman, .man{    
     width: 50vw;
-    height: 30vh;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     margin-bottom: 5%;
 }
 
 .newinstock{
     text-align: center;
- 
+    font-size: 6vw; 
     color: var(--main-color);
     
 }
@@ -157,13 +174,28 @@ margin-bottom: 10%;
     
 }
 
+@media (min-width: 820px){
+    .gender{
+        flex-direction: row;
+        
+
+
+    }
+    .woman, .man { 
+
+
+    }
+
+
+}
+
 .nis{
-    width: 30vw;
-    height: 20vh;
+    width: clamp(10vw, 30vw, 50vw);
+    height: clamp(10vw, 30vw, 50vw);
     background-position: center;
     background-size: cover;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 8vw;
+    margin-right: 8vw;
     display: inline-block;
     
 }
@@ -173,13 +205,13 @@ margin-bottom: 10%;
     background-image: url(/images/RainyDays_Jacket1.png);
 }
 .nis-2{
-    background-image: url(/images/RainyDays_Jacket1.png);
+    background-image: url(/images/RainyDays_Jacket3.png);
 }
 .nis-3{
-    background-image: url(/images/RainyDays_Jacket1.png);
+    background-image: url(/images/RainyDays_Jacket2.png);
 }
 .nis-4{
-    background-image: url(/images/RainyDays_Jacket1.png);
+    background-image: url(/images/RainyDays_Jacket5.png);
 }
 
 /* footer */
@@ -188,25 +220,28 @@ margin-bottom: 10%;
 footer{
     margin-top: 2rem;
     background-color: var(--main-color);
-    min-height: 70px;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
 }
 
 .sm-header{
     margin-bottom: 0.5rem;
+    font-size: 4vw;
 }
 
 .sm{
     color: white;
+    margin: 1rem;
 }
 
 .sm-text{
     margin: 0;
+    font-size: 3vw;
     
 }
 .twitter{
@@ -215,16 +250,19 @@ footer{
 
 .logo-footer{
     background-image: url(/images/Group.png);
-    
-    height: 5vh;
-    width: 18vw;
+    margin: 1rem;
+    width: 30vw;
+    height: 20vh;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+     
 }
 .newsletter{
     color: white;
     margin-bottom: 1rem;
-
+    display: grid;
+    font-size: 3vw;
 }
 
 
