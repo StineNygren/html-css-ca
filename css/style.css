@@ -1,13 +1,49 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
-    padding: 0;
+    font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif; 
 
 }
 
 :root{
     --main-color:#0a3641;
+
+
+    --fs-s: 1rem;
+    --fs-m: 1.5rem;
+    --fs-l: 3rem;
 }
+
+@media (min-width: 600px){
+    :root{
+        --fs-s: 1.5rem;
+        --fs-m: 2rem;
+        --fs-l: 4rem;
+    }
+}
+
+@media (min-width: 820px){
+    :root{
+        --fs-s: 2rem;
+        --fs-m: 2.5rem;
+        --fs-l: 5rem;
+    }
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* Header */
 
@@ -40,7 +76,7 @@ nav{
     margin-left: -1rem;
 }
 .nav-bar{
-    margin-left: 1rem;
+    margin-left: 3rem;
 }
 
 
@@ -48,7 +84,7 @@ nav a{
     display: block;
     color: var(--main-color);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -58,7 +94,7 @@ nav a{
 
 .fa-bars{
     color: var(--main-color);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 @media (min-width: 600px){
@@ -80,6 +116,9 @@ nav a{
         order: -1;
         
     }
+    .menu-label{
+        display: none;
+    }
 }
 
 
@@ -95,8 +134,8 @@ nav a{
 }
 .fa-solid{
   color: var(--main-color);
-  font-size: 1.5rem;
-  margin-right: 1rem;
+  font-size: 2rem;
+  margin-right: 3rem;
 }
 
 
@@ -104,7 +143,7 @@ nav a{
 
 
 .head-photo{
-background-image: url(/images/krisjanis-mezulis-__E07WwlywA-unsplash.jpg);
+background-image: url(/images/mainimgs.jpg);
 width: 100vw;
 height: 25vh;
 background-position: center;
@@ -112,17 +151,19 @@ background-size: cover;
 margin-bottom: 10%;
 }
 
-.grid{
+.gender{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin: 10%;
+    overflow: hidden;
 }
 
 
 .woman-container, .man-container{    
     width: clamp(20vw, 50vw, 50vw);
-    height: clamp(20vw, 50vw, 50vw);
+    aspect-ratio: 1;
     background-position: center;
     background-size: cover; 
     display: flex;
@@ -130,10 +171,11 @@ margin-bottom: 10%;
 
 }
 .man-container{
-    background-image: url(/images/dim-hou-OfF_iK_rYhY-unsplash.jpg);
+    background-image: url(/images/manimg.jpg);
+
 }
 .woman-container{
-    background-image: url(/images/karsten-winegeart-9beSs0ir1aI-unsplash.jpg);
+    background-image: url(/images/womanimg.jpg);
 
 }
 
@@ -160,7 +202,7 @@ margin-bottom: 10%;
 
 .newinstock{
     text-align: center;
-    font-size: 6vw; 
+    font-size: var(--fs-l); 
     color: var(--main-color);
     
 }
@@ -174,24 +216,11 @@ margin-bottom: 10%;
     
 }
 
-@media (min-width: 820px){
-    .gender{
-        flex-direction: row;
-        
-
-
-    }
-    .woman, .man { 
-
-
-    }
-
-
-}
 
 .nis{
-    width: clamp(10vw, 30vw, 50vw);
-    height: clamp(10vw, 30vw, 50vw);
+    width: 20vw;
+    height: clamp(10vw, 20vw, 30vw);
+
     background-position: center;
     background-size: cover;
     margin-left: 8vw;
@@ -202,16 +231,29 @@ margin-bottom: 10%;
 
 
 .nis-1{
-    background-image: url(/images/RainyDays_Jacket1.png);
+    background-image: url(/images/jacket1rs.png);
 }
 .nis-2{
-    background-image: url(/images/RainyDays_Jacket3.png);
+    background-image: url(/images/jacket2rs.png);
 }
 .nis-3{
-    background-image: url(/images/RainyDays_Jacket2.png);
+    background-image: url(/images/jacket3rs.png);
 }
 .nis-4{
-    background-image: url(/images/RainyDays_Jacket5.png);
+    background-image: url(/images/jacket4rs.png);
+}
+
+@media (min-width: 820px){
+    .gender{
+        flex-direction: row;
+        margin: 5%;
+        gap: 20px;
+
+    }
+
+
+
+
 }
 
 /* footer */
@@ -231,7 +273,7 @@ footer{
 
 .sm-header{
     margin-bottom: 0.5rem;
-    font-size: 4vw;
+    font-size: var(--fs-m);
 }
 
 .sm{
@@ -241,7 +283,7 @@ footer{
 
 .sm-text{
     margin: 0;
-    font-size: 3vw;
+    font-size: var(--fs-s);
     
 }
 .twitter{
@@ -251,18 +293,26 @@ footer{
 .logo-footer{
     background-image: url(/images/Group.png);
     margin: 1rem;
-    width: 30vw;
-    height: 20vh;
+    width: 25vw;
+    height: 15vh;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    aspect-ratio: 1/1;
      
 }
 .newsletter{
     color: white;
     margin-bottom: 1rem;
     display: grid;
-    font-size: 3vw;
+    font-size: var(--fs-m);
 }
+
+.nl-input{
+    width: 25vw;
+    height: 3vh;
+}
+
+
 
 
