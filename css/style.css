@@ -14,6 +14,7 @@ body{
 
 :root{
     --main-color:#0a3641;
+    --second-color: #fff;
 
 
     --fs-s: 1rem;
@@ -37,26 +38,41 @@ body{
     }
 }
 
+
 .flex{
     display: flex;
+}
+
+.flex-center{
     justify-content: center;
     align-items: center;
 }
 
+.grid{
+    display: grid;
+}
+
+.cc-img{
+    background-position: center;
+background-size: cover;
+}
+
+
+
+/******* Index ********/
 
 
 /* Header */
 
 header{
-    background-color: white;
-    display: flex;
+    background-color: var(--second-color);
     justify-content: space-between;
     height: 50px;
     align-items: center;
     box-shadow: 0px 0.3px 8px #666;
     position: sticky;
     top: 0;
-    right: 0;
+    /* right: 0; */
 
 }
 
@@ -71,9 +87,9 @@ header{
 
 }
 nav{
-    background-color: white;
+    background-color: var(--second-color);
     position: absolute;
-    margin-left: -1rem;
+    margin-left: -3rem;
 }
 .nav-bar{
     margin-left: 3rem;
@@ -89,8 +105,13 @@ nav a{
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 1rem 0 0 0;
-    
+    transition: 0.5s;
+       
 }
+nav a:hover{
+    font-size: 2.5rem;
+}
+
 
 .fa-bars{
     color: var(--main-color);
@@ -102,9 +123,9 @@ nav a{
         display: block;
         position: static;
     }
-    .fas{
+    /* .fas{
         display: none;
-    }
+    } */
     nav a{
         margin-bottom: 0.5rem;
         display: inline-block;
@@ -146,16 +167,11 @@ nav a{
 background-image: url(/images/mainimgs.jpg);
 width: 100vw;
 height: 25vh;
-background-position: center;
-background-size: cover;
 margin-bottom: 10%;
 }
 
 .gender{
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
     margin: 10%;
     overflow: hidden;
 }
@@ -164,9 +180,6 @@ margin-bottom: 10%;
 .woman-container, .man-container{    
     width: clamp(20vw, 50vw, 50vw);
     aspect-ratio: 1;
-    background-position: center;
-    background-size: cover; 
-    display: flex;
     text-decoration: none;
 
 }
@@ -183,7 +196,7 @@ margin-bottom: 10%;
     position: relative;
     top: 60%;
     left: 40%;
-    color: white; 
+    color: var(--second-color); 
     text-align: center;
     font-weight: bold; 
     font-size: 5vw;
@@ -195,8 +208,6 @@ margin-bottom: 10%;
 
 .woman, .man{    
     width: 50vw;
-    background-position: center;
-    background-size: contain;
     margin-bottom: 5%;
 }
 
@@ -208,7 +219,7 @@ margin-bottom: 10%;
 }
 
 .jackets-home{
-    display: grid;
+
     grid-template-columns: repeat(4, 1fr);
     overflow-x: scroll;
     overflow-y: hidden;
@@ -220,9 +231,6 @@ margin-bottom: 10%;
 .nis{
     width: 20vw;
     height: clamp(10vw, 20vw, 30vw);
-
-    background-position: center;
-    background-size: cover;
     margin-left: 8vw;
     margin-right: 8vw;
     display: inline-block;
@@ -262,11 +270,10 @@ margin-bottom: 10%;
 footer{
     margin-top: 2rem;
     background-color: var(--main-color);
-    width: 100vw;
-    display: flex;
-    justify-content: center;
+    /* width: 100vw; */
+    /* justify-content: center; */
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 
 }
@@ -277,11 +284,13 @@ footer{
 }
 
 .sm{
-    color: white;
+    color: var(--second-color);
     margin: 1rem;
+
 }
 
 .sm-text{
+    text-align: center;
     margin: 0;
     font-size: var(--fs-s);
     
@@ -298,13 +307,12 @@ footer{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
      
 }
 .newsletter{
-    color: white;
-    margin-bottom: 1rem;
-    display: grid;
+    color: var(--second-color);
+    /* margin-bottom: 1rem; */
     font-size: var(--fs-m);
 }
 
@@ -314,5 +322,23 @@ footer{
 }
 
 
+.product-frame{
+grid-template-columns: 1fr 1fr;
+grid-template-rows: repeat(1fr, 3);
+justify-items: center;
+margin: 0 10%;
 
+}
 
+.product-img{
+    width: 25vw;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.product-text p{
+    margin: 0;
+
+}
