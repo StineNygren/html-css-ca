@@ -15,6 +15,7 @@ body{
 :root{
     --main-color:#0a3641;
     --second-color: #fff;
+    --third-color: #d9d9d9;
 
 
     --fs-s: 1rem;
@@ -276,6 +277,8 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
 
+
+
 }
 
 .sm-header{
@@ -322,11 +325,22 @@ footer{
 }
 
 
+
+/******* Jackets ********/
+
+
 .product-frame{
 grid-template-columns: 1fr 1fr;
 grid-template-rows: repeat(1fr, 3);
 justify-items: center;
-margin: 0 10%;
+align-items: center;
+margin: 0 10% 15% 10%;
+gap: 5%;
+
+}
+.product{
+    /* box-shadow: 0px 0px 2px #666;
+    padding: 25px; */
 
 }
 
@@ -340,5 +354,78 @@ margin: 0 10%;
 
 .product-text p{
     margin: 0;
+    font-size: var(--fs-m);
+    /* text-decoration: none;      a tag over div, what to do WHY*/  
 
+}
+
+@media (min-width: 820px){
+
+    .product-frame{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(1fr, 2);
+        justify-items: center;
+        align-items: center;
+        margin: 0 10% 15% 10%;
+        gap: 10%;
+        
+        }
+        .product-img{
+            width: 20vw;
+        }       
+
+
+}
+
+
+/******* Jacket *********/
+
+.scott-jacket{
+    background-image: url(/images/jacket4rs.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80vw;
+    aspect-ratio: 1;
+    margin: 10% 0;
+
+
+}
+.jacket-wrapper{
+    flex-direction: column;
+}
+
+.scott-text-section{
+    font-size: var(--fs-m);
+margin-left: 10%;
+margin-right: 10%;
+}
+.add-button{
+    background-color: var(--main-color);
+    width: 30vw;
+    height: 5vh;  
+}
+.add-text{
+    color: var(--second-color);
+    text-decoration: none;
+}
+.scott-header{
+    margin-bottom: 0;
+}
+.scott-price{
+    margin-top: 0;
+}
+.size{
+    background-color: var(--third-color);
+    width: 15vw;
+    height: 3vh;
+}
+
+@media (min-width: 600px){
+    .jacket-wrapper{
+        flex-direction: row;
+    }
+    .scott-jacket{
+        margin-left: 10%;
+    }
 }
