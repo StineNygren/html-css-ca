@@ -9,7 +9,12 @@ body{
     margin: 0;
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif; 
+    
 
+}
+
+main{
+    height: 90vh;
 }
 
 :root{
@@ -289,6 +294,7 @@ footer{
 
 
 
+
 }
 
 .sm-header{
@@ -438,6 +444,87 @@ margin-right: 10%;
     }
 }
 
+/******** Popup ********/
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--second-color);
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    flex-direction: column;
+    
+  }
+  
+  .popup h2 {
+
+    margin-top: 0;
+
+  }
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    font-size: 5rem;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  .checkg{
+    color: #06d85f;
+    font-size: 50px;
+    margin-bottom: 3rem;
+  }
+
+  .content-box{
+    background-color: var(--main-color);
+  }
+
+  .content-box a{
+    text-decoration: none;
+    color: var(--second-color);
+    font-size: var(--fs-m);
+    padding: 3rem;
+
+  }
+
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
 /******* About ********/
 
 .about-wrapper{
@@ -561,5 +648,6 @@ margin-right: 10%;
         flex-direction: row;
     }
 }
+
 
 
