@@ -123,7 +123,7 @@ nav a{
        
 }
 nav a:hover{
-    font-size: 2.5rem;
+    transform: scale(1.3);
 }
 
 
@@ -207,13 +207,11 @@ margin-bottom: 10%;
 }
 
 .text-woman, .text-man{
-    position: relative;
-    top: 60%;
-    left: 40%;
+
     color: var(--second-color); 
-    text-align: center;
+    /* text-align: center;
     font-weight: bold; 
-    font-size: 5vw;
+    font-size: 5vw; */
 }
 .text-woman{
     left: 30%;
@@ -325,7 +323,6 @@ footer{
     background-size: contain;
     background-repeat: no-repeat;
     /* aspect-ratio: 1/1; */
-     
 }
 .newsletter{
     color: var(--second-color);
@@ -342,6 +339,12 @@ footer{
 
 /******* Jackets ********/
 
+.hj{
+    font-size: var(--fs-l);
+    color: var(--main-color);
+    margin-top: -5rem;
+}
+
 
 .product-frame{
 grid-template-columns: 1fr 1fr;
@@ -350,26 +353,36 @@ justify-items: center;
 align-items: center;
 margin: 0 10% 15% 10%;
 gap: 5%;
+transition: 1s;
 
 }
 .product{
-    /* box-shadow: 0px 0px 2px #666;
-    padding: 25px; */
+    box-shadow: 0px 0px 2px #666;
+    padding: 25px;
 
 }
 
 .product-img{
     width: 25vw;
+    aspect-ratio: 4/5;
 }
+.product-frame a{
+    text-decoration: none;
+    color: black;
+    
+}     
 
 
 
 .product-text p{
     margin: 0;
     font-size: var(--fs-m);
-    /* text-decoration: none;      a tag over div, what to do WHY*/  
+ text-decoration: none;  }
 
-}
+
+ .product:hover{
+    transform: scale(1.1);
+ }
 
 @media (min-width: 820px){
 
@@ -378,19 +391,24 @@ gap: 5%;
         grid-template-rows: repeat(1fr, 2);
         justify-items: center;
         align-items: center;
-        margin: 0 10% 15% 10%;
-        gap: 10%;
+
+        text-decoration: none;
         
         }
         .product-img{
             width: 20vw;
-        }       
+            aspect-ratio: 3/4;
+        }  
+   
 
 
 }
 
 
 /******* Jacket *********/
+
+
+
 
 .scott-jacket{
     background-image: url(/images/jacket4rs.png);
@@ -400,6 +418,7 @@ gap: 5%;
     width: 80vw;
     aspect-ratio: 1;
     margin: 10% 0;
+
 
 
 }
@@ -428,11 +447,31 @@ margin-right: 10%;
     margin-top: 0;
     margin-bottom: 10%;
 }
-.size{
-    background-color: var(--third-color);
-    width: 15vw;
-    height: 3vh;
+
+
+.radio{
+    margin: 5%;
 }
+
+.radio input[type="radio"]{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.radio input[type="radio"]:checked + label{
+    background-color: #333;
+    color: var(--second-color);
+}
+
+.radio label{
+    background-color: var(--third-color);
+    padding: 10px;
+    appearance: button;
+    padding: 5%;
+    font-size: var(--fs-s);
+
+}
+
 
 @media (min-width: 600px){
     .jacket-wrapper{
@@ -543,12 +582,22 @@ margin-right: 10%;
     margin: 0 10%;
 }
 
+.about-text-wrapper p{
+    font-size: var(--fs-s);
+    margin: 2rem;
+    
+}
+
 .our-story{
     text-align: center;
     color: var(--main-color);
     font-size: var(--fs-l);
     margin-bottom: 0;
 }
+
+/* .pushing{
+    width: 30vw;
+} */
 
 @media (min-width: 600px){
     .about-wrapper{
@@ -557,12 +606,13 @@ margin-right: 10%;
     }
     .about-img{
         margin-top: 5%;
-        margin-right: 10%;
+        margin-right: 5%;
         width: 40vw;
-
+        height: 60vh;
     }
     .about-text-wrapper{
         max-width: 45vw;
+        margin: 0 5%;
     }
 
 }
@@ -595,6 +645,9 @@ margin-right: 10%;
 .items{
     flex-direction: column;
 }
+.items-img{
+    margin-right: 10%;
+}
 
 .total{
     display: flex;
@@ -607,36 +660,69 @@ margin-right: 10%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-bottom: 2rem;
     /* aspect-ratio: 1; */
 }
  
 
 .items-img{
-    width: 30vw;
+    width: 25vw;
     aspect-ratio: 1;
+
 }
 
-.information-section{
+.information-section, .payment-section{
     background-color: var(--third-color);
-    width: 45vw;
-
+    width: 50vw;
 }
 
-.payment-section{
-    background-color: var(--third-color);
-    width: 45vw;
+.item-1{
+    margin-bottom: 1rem;
 }
+
+
 
 .information-wrapper h3{
     font-size: var(--fs-m);
 }
+.inputs, .payments{
+    align-items: center;
+    justify-content: center; 
+    gap: 5px;
+
+}
+
+.inputs input{
+    width: 40vw;
+
+}
+
+.adress{
+    margin-bottom: 10px;
+}
+
+
 
 .method{
     background-color: var(--second-color);
+    width: 30vw;    
+    margin-bottom: 10px;
+    
 }
 .method a{
     text-decoration: none;
     color: black;
+    font-size: var(--fs-m);
+}
+
+.items p{
+    font-size: var(--fs-m);
+    margin: 0;
+
+}
+
+.items h4{
+    margin-bottom: 0;
 }
 
 
@@ -646,7 +732,78 @@ margin-right: 10%;
     .cr-wrapper{
         flex-direction: row;
     }
+    .information-section, .payment-section{
+        background-color: var(--third-color);
+        width: 30vw;  
+     
+    
+    }
+
+    .inputs input{
+        width: 25vw;
+    
+    }
+    .method{
+        width: 25vw; 
+
+        
+    }
+}
+
+@media (min-width: 1000px){
+    .information-section, .payment-section{
+        background-color: var(--third-color);
+        width: 30vw;  
+        padding: 2rem;      
+    
+    }
+    
+    .information-section{
+        margin-bottom: 3rem;
+    }
+
 }
 
 
 
+/************ contact *************/
+
+.contact-wrapper{
+    flex-direction: column;
+    margin: 10%;
+}
+
+.contact-info{
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+
+.contact-input{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#message{
+    margin-top: -10px;
+    height: 20vh;
+}
+
+
+@media (min-width: 600px){
+    .contact-wrapper{
+        flex-direction: row;
+        gap: 5rem;
+    }
+}
+
+/********* cardiformation *********/
+
+.approve-button{
+    background-color: var(--main-color);
+    margin-top: 3rem;
+    height: 5vh;
+}
