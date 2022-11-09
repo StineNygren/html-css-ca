@@ -807,3 +807,46 @@ margin-right: 10%;
     margin-top: 3rem;
     height: 5vh;
 }
+
+
+/********* success **********/
+
+.success-icon{
+    color: #06d85f;
+    font-size: 50px;
+    margin: 4rem 0 2rem 0;
+
+}
+ .success-text{
+    margin: 0 20% 3rem 20%;
+ }
+ .success-text h3{
+    margin-bottom: 0;
+    font-size: var(--fs-m);
+ }
+ .success-text p{
+    margin-top: 0;
+    font-size: var(--fs-s);
+ }
+
+ .success-wrapper{
+    margin: 0 10%;
+    flex-direction: column;
+
+ }
+
+ .success-h{
+    font-size: var(--fs-l);
+ }
+
+ @media (min-width: 600px){
+    .success-wrapper{
+        flex-direction: row-reverse;
+
+    }
+    .success-text{
+        margin: 0 5%;
+     }
+ }
+
+
