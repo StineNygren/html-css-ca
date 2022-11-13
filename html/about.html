@@ -19,7 +19,7 @@
   <body>
     <header class="flex">
       <section class="nav-bar">
-        <input type="checkbox" name="" id="menubar" />
+        <input type="checkbox" id="menubar" />
         <label for="menubar" class="menu-label"
           ><i class="fas fa-bars"></i
         ></label>
@@ -47,7 +47,10 @@
     </header>
     <main>
       <section class="about-wrapper flex">
-        <section class="about-img cc-img"></section>
+        <div class="flex img-place">
+          <section class="about-img cc-img"></section>
+        </div>
+
         <section class="about-text-wrapper flex">
           <h1 class="our-story bold text-center">OUR STORY</h1>
           <p>
@@ -57,11 +60,7 @@
             tellus elit sed risus. Maecenas eget condimentum velit, sit amet
             feugiat lectus.
           </p>
-          <img
-            class="flex-center Pushing"
-            src="/images/ptcz.png"
-            alt="Pushing the Comfort Zone"
-          />
+          <h2 class="text-center">Pushing the comfort zone</h2>
           <p>
             Praesent auctor purus luctus enim egestas, ac scelerisque ante
             pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu
@@ -81,13 +80,7 @@
       </section>
       <section class="newsletter grid">
         <label for="emain">News Letter</label>
-        <input
-          class="nl-input"
-          placeholder="Email:"
-          type="email"
-          name=""
-          id=""
-        />
+        <input class="nl-input" placeholder="Email:" type="email" />
       </section>
     </footer>
   </body>

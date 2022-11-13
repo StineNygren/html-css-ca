@@ -19,7 +19,7 @@
   <body>
     <header class="flex">
       <section class="nav-bar">
-        <input type="checkbox" name="" id="menubar" />
+        <input type="checkbox" id="menubar" />
         <label for="menubar" class="menu-label"
           ><i class="fas fa-bars"></i
         ></label>
@@ -67,13 +67,17 @@
         </section>
         <section class="contact-input flex">
           <h2>Send us a message.</h2>
-          <input placeholder="Name:" type="text" name="" id="" />
-          <input placeholder="Email:" type="email" name="" id="" />
+          <input placeholder="Name:" type="text" />
+          <input placeholder="Email:" type="email" />
 
-          <input placeholder="Order number:" type="number" name="" id="" />
+          <input placeholder="Order number:" type="number" />
           <label for="message">Message:</label>
-          <input type="text" name="" id="message" />
-          <input type="submit" value="Send message" />
+          <input type="text" id="message" />
+          <input
+            class="submit-button bold"
+            type="submit"
+            value="Send message"
+          />
         </section>
       </section>
     </main>
@@ -87,13 +91,7 @@
       </section>
       <section class="newsletter grid">
         <label for="emain">News Letter</label>
-        <input
-          class="nl-input"
-          placeholder="Email:"
-          type="email"
-          name=""
-          id=""
-        />
+        <input class="nl-input" placeholder="Email:" type="email" />
       </section>
     </footer>
   </body>

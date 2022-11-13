@@ -19,7 +19,7 @@
   <body>
     <header class="flex">
       <section class="nav-bar">
-        <input type="checkbox" name="" id="menubar" />
+        <input type="checkbox" id="menubar" />
         <label for="menubar" class="menu-label"
           ><i class="fas fa-bars"></i
         ></label>
@@ -53,7 +53,13 @@
           <p class="scott-price">105$</p>
 
           <section class="radio">
-            <input class="radio-butten" type="radio" name="size" id="xs" />
+            <input
+              class="radio-butten"
+              type="radio"
+              checked
+              name="size"
+              id="xs"
+            />
             <label for="xs">XS</label>
 
             <input class="radio-butten" type="radio" name="size" id="s" />
@@ -101,13 +107,7 @@
       </section>
       <section class="newsletter grid">
         <label for="emain">News Letter</label>
-        <input
-          class="nl-input"
-          placeholder="Email:"
-          type="email"
-          name=""
-          id=""
-        />
+        <input class="nl-input" placeholder="Email:" type="email" />
       </section>
     </footer>
   </body>

@@ -168,7 +168,7 @@ nav a:hover {
 
 .woman-container,
 .man-container {
-  width: clamp(20vw, 35vw, 50vw);
+  width: clamp(20rem, 40vw, 50vw);
   aspect-ratio: 1;
   text-decoration: none;
 }
@@ -206,7 +206,7 @@ nav a:hover {
 
 .nis {
   width: 20vw;
-  height: clamp(10vw, 20vw, 30vw);
+  height: clamp(10rem, 20vw, 30vw);
   margin-left: 8vw;
   margin-right: 8vw;
   display: inline-block;
@@ -502,6 +502,12 @@ footer {
   margin: 0 10%;
 }
 
+.about-text-wrapper h2 {
+  color: var(--main-color);
+  font-size: var(--fs-m);
+  margin: 0;
+}
+
 .about-text-wrapper p {
   font-size: var(--fs-m);
   margin: 2rem;
@@ -514,14 +520,16 @@ footer {
 }
 
 @media (min-width: 600px) {
+  .img-place {
+    align-items: center;
+    margin-right: var(--margin-s);
+  }
   .about-wrapper {
     flex-direction: row-reverse;
   }
   .about-img {
-    margin-top: var(--margin-m);
-    margin-right: var(--margin-s);
     width: 40vw;
-    height: 60vh;
+    height: 90%;
   }
   .about-text-wrapper {
     max-width: 45vw;
@@ -530,9 +538,6 @@ footer {
 }
 
 @media (min-width: 820px) {
-  .about-img {
-    margin-top: var(--margin-s);
-  }
   .about-text-wrapper p {
     font-size: var(--fs-s);
   }
@@ -550,8 +555,12 @@ footer {
   margin-bottom: var(--margin-s);
 }
 
+.cr-text {
+  flex-direction: column;
+}
+
 .x-icon {
-  justify-content: flex-end;
+  align-self: flex-end;
 }
 
 .item-1-img {
@@ -587,7 +596,8 @@ footer {
 
 .information-section,
 .payment-section {
-  background-color: var(--third-color);
+  background-color: rgb(10, 54, 65, 0.5);
+  border-radius: 1rem;
   width: 50vw;
 }
 
@@ -689,6 +699,11 @@ footer {
 #message {
   margin-top: -10px;
   height: 20vh;
+}
+
+.submit-button {
+  background-color: rgb(10, 54, 65, 0.5);
+  border-radius: 1rem;
 }
 
 @media (min-width: 600px) {
