@@ -154,7 +154,7 @@ nav a:hover {
 /******* main ********/
 
 .head-photo {
-  background-image: url(/images/mainimgs.jpg);
+  background-image: url(../images/mainimgs.jpg);
   width: 100%;
   height: 25vh;
   margin-bottom: var(--margin-m);
@@ -173,10 +173,10 @@ nav a:hover {
   text-decoration: none;
 }
 .man-container {
-  background-image: url(/images/manimg.jpg);
+  background-image: url(../images/manimg.jpg);
 }
 .woman-container {
-  background-image: url(/images/womanimg.jpg);
+  background-image: url(../images/womanimg.jpg);
 }
 
 .text-woman,
@@ -213,16 +213,17 @@ nav a:hover {
 }
 
 .nis-1 {
-  background-image: url(/images/jacket1rs.png);
+  background-image: url(../images/jacket1rs.png);
 }
+
 .nis-2 {
-  background-image: url(/images/jacket2rs.png);
+  background-image: url(../images/jacket2rs.png);
 }
 .nis-3 {
-  background-image: url(/images/jacket3rs.png);
+  background-image: url(../images/jacket3rs.png);
 }
 .nis-4 {
-  background-image: url(/images/jacket4rs.png);
+  background-image: url(../images/jacket4rs.png);
 }
 
 @media (min-width: 820px) {
@@ -272,7 +273,7 @@ footer {
 }
 
 .logo-footer {
-  background-image: url(/images/Group.png);
+  background-image: url(../images/Group.png);
   margin: 1rem;
   width: 25vw;
   height: 15vh;
@@ -314,7 +315,7 @@ footer {
   width: 25vw;
   aspect-ratio: 4/5;
 }
-.product-frame a {
+a {
   text-decoration: none;
   color: black;
 }
@@ -343,7 +344,7 @@ footer {
 /******* Jacket *********/
 
 .scott-jacket {
-  background-image: url(/images/jacket4rs.png);
+  /* background-image: url(../images/jacket4rs.png); */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -492,7 +493,7 @@ footer {
 }
 
 .about-img {
-  background-image: url(/images/aboutimg.jpg);
+  background-image: url(../images/aboutimg.jpg);
   width: 100%;
   height: 40vh;
 }
@@ -564,11 +565,11 @@ footer {
 }
 
 .item-1-img {
-  background-image: url(/images/jacket3rs.png);
+  background-image: url(../images/jacket3rs.png);
 }
 
 .item-2-img {
-  background-image: url(/images/jacket4rs.png);
+  background-image: url(../images/jacket4rs.png);
 }
 
 .items {
@@ -583,7 +584,7 @@ footer {
   justify-content: space-between;
 }
 .total-line {
-  background-image: url(/images/line.png);
+  background-image: url(../images/line.png);
   height: 2vh;
   background-size: contain;
   background-repeat: no-repeat;
