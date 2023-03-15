@@ -344,13 +344,11 @@ a {
 /******* Jacket *********/
 
 .scott-jacket {
-  /* background-image: url(../images/jacket4rs.png); */
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 80vw;
-  aspect-ratio: 1;
   margin: 10% 0;
+}
+.scott-img {
+  object-fit: cover;
+  width: 50vw;
 }
 .jacket-wrapper {
   flex-direction: column;
@@ -403,6 +401,9 @@ a {
 }
 
 @media (min-width: 600px) {
+  .scott-img {
+    width: 30vw;
+  }
   .jacket-wrapper {
     flex-direction: row;
   }
