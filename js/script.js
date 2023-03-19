@@ -19,14 +19,8 @@ async function getJackets() {
 getJackets();
 
 function getJacket(jacket) {
-  const jacketObj = {
-    id: jacket.id,
-    name: jacket.name,
-    image: jacket.images.src,
-    price: jacket.price_html,
-  };
   productFrame.innerHTML += `
-  <a href="./jacket.html?id=${jacketObj.id}" class="product">
+  <a href="./jacket.html?id=${jacket.id}" class="product">
        <img class="product-img" src="${jacket.images[0].src}" alt="">
        <h2>${jacket.name}</h2>
        <p>${jacket.price_html}</p>
