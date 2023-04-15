@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 let id = urlParams.get("id");
+console.log(id);
 
 const scottJacket = document.querySelector(".scott-jacket");
 const jacketInfo = document.querySelector(".jacket-info");

@@ -20,9 +20,13 @@ body {
   --second-color: #fff;
   --third-color: #d9d9d9;
 
+  --fs-s: calc(13px + 0.390625vw);
+  --fs-m: calc(15px + 0.390625vw);
+  --fs-l: calc(20px + 0.390625vw);
+  /* 
   --fs-s: 1rem;
   --fs-m: 1.5rem;
-  --fs-l: 3rem;
+  --fs-l: 3rem; */
 
   --margin-s: 5%;
   --margin-m: 10%;
@@ -169,26 +173,35 @@ nav a:hover {
 .woman-container,
 .man-container {
   width: clamp(20rem, 40vw, 50vw);
-  aspect-ratio: 1;
+  aspect-ratio: 16/9;
   text-decoration: none;
+  align-items: flex-end;
+  justify-content: center;
 }
 .man-container {
   background-image: url(../images/manimg.jpg);
 }
 .woman-container {
-  background-image: url(../images/womanimg.jpg);
+  background-image: url(../images/woman.svg);
 }
 
-.text-woman,
-.text-man {
+.gender-text {
   color: var(--second-color);
   font-size: var(--fs-m);
-  margin-bottom: -4rem;
+}
+
+.gender-bg {
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
 }
 
 .woman,
 .man {
   margin-bottom: var(--margin-s);
+}
+
+.explore-section {
+  background-color: rgba(10, 54, 65, 0.25);
 }
 
 .newinstock {
@@ -226,7 +239,7 @@ nav a:hover {
   background-image: url(../images/jacket4rs.png);
 }
 
-@media (min-width: 820px) {
+@media (min-width: 760px) {
   .gender {
     flex-direction: row;
     gap: var(--margin-m);
@@ -236,11 +249,11 @@ nav a:hover {
     height: 30vh;
     margin-bottom: var(--margin-s);
   }
-  .text-woman,
-  .text-man {
-    font-size: var(--fs-l);
+
+  /* .gender-text {
+    font-size: var(--fs-m);
     margin-bottom: -7rem;
-  }
+  } */
 }
 
 /******** footer *******/
