@@ -202,6 +202,20 @@ nav a:hover {
 
 .explore-section {
   background-color: rgba(10, 54, 65, 0.25);
+  flex-direction: column;
+  align-items: center;
+}
+.explore-img img {
+  width: 90vw;
+}
+
+/* .explore-img {
+  justify-content: center;
+} */
+
+.explore-text {
+  flex-direction: column;
+  /* align-items: center; */
 }
 
 .newinstock {
@@ -248,6 +262,15 @@ nav a:hover {
   .head-photo {
     height: 30vh;
     margin-bottom: var(--margin-s);
+  }
+
+  .explore-section {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .explore-img img {
+    width: 50vw;
   }
 
   /* .gender-text {
