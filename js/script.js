@@ -22,8 +22,8 @@ function getJacket(jacket) {
   productFrame.innerHTML += `
   <a href="./jacket.html?id=${jacket.id}" class="product">
        <img class="product-img" src="${jacket.images[0].src}" alt="">
-       <h2>${jacket.name}</h2>
-       <p>${jacket.price_html}</p>
+       <h2 class="jacket-name">${jacket.name}</h2>
+       <p class="jacket-price">${jacket.price_html}</p>
        </a>
        
       `;

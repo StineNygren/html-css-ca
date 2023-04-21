@@ -58,8 +58,8 @@
         <a href="./checkout.html"><i class="fa-solid fa-bag-shopping"></i></a>
       </section>
     </header>
-    <main>
-      <section class="contact-wrapper flex flex-center">
+    <main class="contact-page flex flex-center">
+      <section class="contact-wrapper flex">
         <section class="contact-text">
           <h2>How to get in contact.</h2>
           <p>
@@ -68,24 +68,28 @@
           </p>
           <section class="contact-info flex">
             <div>
-              <h3>Number:</h3>
+              <h2>Number:</h2>
               <p>Mon-Fri</p>
             </div>
             <div>
-              <h3>48350537</h3>
+              <h2>48350537</h2>
 
               <p>9am-4pm</p>
             </div>
           </section>
         </section>
         <section class="contact-input flex">
-          <h2>Send us a message.</h2>
-          <input placeholder="Name:" type="text" />
-          <input placeholder="Email:" type="email" />
+          <h2 class="message-text">Send us a message.</h2>
+          <input class="message-input" placeholder="Name:" type="text" />
+          <input class="message-input" placeholder="Email:" type="email" />
 
-          <input placeholder="Order number:" type="number" />
-          <label for="message">Message:</label>
-          <input type="text" id="message" />
+          <input
+            class="message-input"
+            placeholder="Order number:"
+            type="number"
+          />
+          <label class="message-text" for="message">Message:</label>
+          <input class="message-input" type="text" id="message" />
           <input
             class="submit-button bold"
             type="submit"
