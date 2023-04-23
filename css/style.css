@@ -863,7 +863,7 @@ a {
   background-color: var(--main-color);
   border-radius: 5px;
   /* margin-top: 1rem; */
-  height: 5vh;
+  height: 7vh;
 }
 .approve-button:hover {
   background-color: #30535b;
